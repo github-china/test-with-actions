@@ -6,40 +6,42 @@
   Encourage users to open new tabs for steps!
 -->
 
-## Step 1: Add a test workflow
+## Step 1: 添加测试工作流
 
-_Welcome to "GitHub Actions: Continuous Integration"! :wave:_
+_欢迎来到 "GitHub Actions: 持续集成" 课程! :wave:_
 
-**What is _continuous integration_?**: [Continuous integration](https://en.wikipedia.org/wiki/Continuous_integration) can help you stick to your team’s quality standards by running tests and reporting the results on GitHub. CI tools run builds and tests, triggered by commits. The quality results post back to GitHub in the pull request. The goal is fewer issues in `main` and faster feedback as you work.
+**什么是 _持续集成(CI)_?**: [Continuous integration](https://en.wikipedia.org/wiki/Continuous_integration) 它能帮助你在团队开发中保持良好的代码质量。每次提交（commit）都会触发自动构建和测试，测试结果会反馈到 GitHub 的拉取请求（Pull Request）中。这样既能减少 `main` 分支中的问题，又能让你在开发时获得更快的反馈。
 
 ![An illustration with a left half and a right half. On the left: illustration of how GitHub Actions terms are encapsulated. At the highest level: workflows and event triggers. Inside workflows: jobs and definition of the build environment. Inside jobs: steps. Inside steps: a call to an action. On the right: the evaluated sequence: workflow, job, step, action.](https://user-images.githubusercontent.com/6351798/88589835-f5ce0900-d016-11ea-8c8a-0e7d7907c713.png)
 
-- **Workflow**: A workflow is a unit of automation from its start to finish, including the definition of what triggers the automation, what environment or other aspects should be taken into account during the automation, and what should happen as a result of the trigger.
-- **Job**: A job is a section of the workflow, and is made up of one or more steps. In this section of our workflow, the template defines the steps that make up the `build` job.
-- **Step**: A step represents one _effect_ of the automation. A step could be defined as a GitHub Action, or another unit, like printing something to the console.
-- **Action**: An action is a piece of automation written in a way that is compatible with workflows. Actions can be written by GitHub, by the open source community, or you can write them yourself!
+- **Workflow（工作流）**：从触发到结束的一整套自动化流程。包括触发条件、运行环境以及触发后执行的任务。
+- **Job（任务）**：工作流中的一个阶段，由一个或多个步骤组成。例如，这里我们定义的 `build` 任务就是其中一部分。
+- **Step（步骤）**：任务中的一个具体动作，比如运行某个命令或执行一个 Action。
+- **Action（动作）**：一个可复用的自动化单元，可以由 GitHub 官方、开源社区，或者你自己编写。
 
-To learn more, check out [Workflow syntax for GitHub Actions](https://docs.github.com/actions/using-workflows/workflow-syntax-for-github-actions) in the GitHub Docs.
+想了解更多，请查看 GitHub 文档：[Workflow syntax for GitHub Actions](https://docs.github.com/actions/using-workflows/workflow-syntax-for-github-actions)。
 
-First, let's add a workflow to lint (clean, like a lint roller) our Markdown files in this repository.
+接下来，我们要在这个仓库中添加一个工作流，用来检测（lint）Markdown 文件的格式一致性。
 
-### :keyboard: Activity: Add a test workflow
+### :keyboard: 实操环节: 添加测试工作流
 
-1. Open a new browser tab, and work through the following steps in that tab while you read the instructions in this tab.
-1. Go to the **Actions tab**.
-1. Click **New workflow**.
-1. Search for "Simple workflow" and click **Configure**.
-1. Name your workflow `ci.yml`.
-1. Update the workflow by deleting the last two steps.
-1. Add the following step at the end of your workflow:
+1. 打开一个新的浏览器标签页，方便一边操作一边阅读本教程。
+2. 进入仓库的 **Actions** tab页。
+3. 点击 **New workflow（新建工作流）**。
+4. 搜索 “Simple workflow”，并点击 **Configure（配置）**。
+5. 将工作流文件命名为 `ci.yml`。
+6. 删除模板中最后两个步骤。
+7. 在工作流的末尾添加以下步骤：
+
    ```yml
    - name: Run markdown lint
      run: |
        npm install remark-cli remark-preset-lint-consistent
        npx remark . --use remark-preset-lint-consistent --frail
    ```
-   > Even after the code is indented properly in `ci.yml`, you will see a build error in GitHub Actions. We'll fix this in the next step.
-1. Click **Commit changes...**, and choose to make a new branch named `ci`.
-1. Click **Propose changes**.
-1. Click **Create pull request**.
-1. Wait about 20 seconds and then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/actions) will automatically update to the next step.
+
+   > 即使在 `ci.yml` 中正确缩进后，GitHub Actions 仍可能报错。我们会在下一步修复它。
+8. 点击 **Commit changes...（提交更改）**，并选择创建一个名为 `ci` 的新分支。
+9. 点击 **Propose changes（提交修改建议）**。
+10. 点击 **Create pull request（创建拉取请求）**。
+11. 等待大约 20 秒，然后刷新此页面（即当前教程页面）。[GitHub Actions](https://docs.github.com/actions) 会自动检测并跳转到下一步。

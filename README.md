@@ -7,9 +7,9 @@
   Add your open source license, GitHub uses MIT license.
 -->
 
-# Test with Actions
+# 使用 Actions 进行测试
 
-_Create workflows that enable you to use Continuous Integration (CI) for your projects._
+_创建工作流，让你的项目具备持续集成（CI）能力。_
 
 </header>
 
@@ -21,23 +21,24 @@ _Create workflows that enable you to use Continuous Integration (CI) for your pr
 
 ## Welcome
 
-[Continuous integration](https://en.wikipedia.org/wiki/Continuous_integration) can help you stick to your team’s quality standards by running tests and reporting the results on GitHub. CI tools run builds and tests, triggered by commits. The results post back to GitHub in the pull request. The goal is fewer issues in `main` and faster feedback as you work.
+[持续集成（Continuous Integration，简称CI）](https://en.wikipedia.org/wiki/Continuous_integration) 可以帮助你和团队在开发过程中保持良好的代码质量。
+它会在每次提交后自动运行构建与测试，并在 GitHub 上反馈结果。这样能让主分支（`main`）的问题更少，开发过程中的反馈也更及时。
 
-- **Who is this for**: Developers, DevOps Engineers, new GitHub users, students, teams.
-- **What you'll learn**: What continuous integration is, how to use GitHub Actions for CI, how to create a workflow that runs tests and produces test reports.
-- **What you'll build**: We'll use [remark-lint](https://github.com/remarkjs/remark-lint) to check the consistency of Markdown files.
-- **Prerequisites**: We assume you've completed [Hello GitHub Actions](https://github.com/skills/hello-github-actions) first.
-- **How long**: This course takes less than two hours to complete.
+* **目标人群**：开发者、DevOps 工程师、GitHub 新用户、学生、团队。
+* **学习内容**：了解持续集成的概念、学习如何使用 GitHub Actions 实现 CI、掌握创建运行测试并生成测试报告的工作流。
+* **您将完成**：我们将使用 [remark-lint](https://github.com/remarkjs/remark-lint) 来检查 Markdown 文件的格式一致性。
+* **先决条件**：建议先完成 [Hello GitHub Actions](https://github.com/github-china/hello-github-actions) 课程。
+* **学习时长**：整个课程用时不到两小时。
 
-In this course, you will:
+在这门课程中，你将完成以下任务：
 
-1. Add a test workflow
-2. Fix the test
-3. Upload a test report
-4. Add branch protections
-5. Merge your pull request
+1. 添加一个用于测试的工作流(Workflow)
+2. 修复测试中发现的问题
+3. 上传测试报告
+4. 设置分支保护
+5. 合并你的拉取请求（Pull Request）
 
-### How to start this course
+### 如何开始课程
 
 <!-- For start course, run in JavaScript:
 'https://github.com/new?' + new URLSearchParams({
@@ -50,14 +51,14 @@ In this course, you will:
 }).toString()
 -->
 
-[![start-course](https://user-images.githubusercontent.com/1221423/235727646-4a590299-ffe5-480d-8cd5-8194ea184546.svg)](https://github.com/new?template_owner=skills&template_name=test-with-actions&owner=%40me&name=skills-test-with-actions&description=My+clone+repository&visibility=public)
+[![start-course](https://user-images.githubusercontent.com/1221423/235727646-4a590299-ffe5-480d-8cd5-8194ea184546.svg)](https://github.com/new?template_owner=github-china&template_name=test-with-actions&owner=%40me&name=skills-test-with-actions&description=My+clone+repository&visibility=public)
 
-1. Right-click **Start course** and open the link in a new tab.
-2. In the new tab, most of the prompts will automatically fill in for you.
-   - For owner, choose your personal account or an organization to host the repository.
-   - We recommend creating a public repository, as private repositories will [use Actions minutes](https://docs.github.com/billing/managing-billing-for-github-actions/about-billing-for-github-actions).
-   - Scroll down and click the **Create repository** button at the bottom of the form.
-3. After your new repository is created, wait about 20 seconds, then refresh the page. Follow the step-by-step instructions in the new repository's README.
+1. 右键点击上方 **Start course** 按钮，选择在新标签页中打开链接。
+2. 在新页面中根据系统提示新建一个仓库。
+   - 仓库名称、描述这些字段系统已经帮我们自动填充好了，您可以按需修改。
+   - 建议选择公开仓库，因为私有仓库有[GitHub Actions 分钟数限制](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions)。
+   - 最后点击 Create repository 按钮
+3. 仓库创建完毕后，等待大约 20 秒（等待Action执行），然后刷新页面。注意是刷新您仓库的页面，不是本课程的页面。如果页面没有变化，请继续等待。然后按照 README 中的步骤一步步进行。
 
 <footer>
 

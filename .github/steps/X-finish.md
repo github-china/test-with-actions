@@ -3,23 +3,23 @@
   Review what we learned, ask for feedback, provide next steps.
 -->
 
-## Finish
+## 完成
 
-_Congratulations friend, you've completed this course!_
+_🎉恭喜你已经完成了本课程！_
 
-<img src=https://octodex.github.com/images/Fintechtocat.png alt=celebrate width=300 align=right>
+<img src=[https://octodex.github.com/images/Fintechtocat.png](https://octodex.github.com/images/Fintechtocat.png) alt=celebrate width=300 align=right>
 
-Here's a recap of all the tasks you've accomplished in your repository:
+以下是课程回顾：
 
-- We created an Actions workflow to lint our Markdown files.
-- You caught an issue in a file and fixed the issue before it could make it to `main`.
-- You learned how to use build artifacts for test reports.
-- You enabled branch protections to require the workflow to pass before merging.
+* 我们创建了一个 Actions 工作流，用于检查（lint）Markdown 文件。
+* 你发现了文件中的问题，并在它进入 `main` 分支之前修复了它。
+* 你学习了如何使用构建产物（build artifacts）来保存测试报告。
+* 你启用了分支保护，确保在合并前工作流必须通过。
 
-### What's next?
+### 接下来可以做什么？
 
-- Get more ideas of what you can do with [awesome actions](https://github.com/sdras/awesome-actions).
-- We'd love to hear what you thought of this course [in our discussion board](https://github.com/orgs/skills/discussions/categories/test-with-actions).
-- [Take another GitHub Skills course](https://github.com/skills).
-- [Read the GitHub Getting Started docs](https://docs.github.com/get-started).
-- To find projects to contribute to, check out [GitHub Explore](https://github.com/explore).
+* 从这里获得更多灵感：[awesome actions](https://github.com/sdras/awesome-actions)。
+* 欢迎在[讨论区](https://github.com/orgs/skills/discussions/categories/test-with-actions)分享你对课程的想法。
+* [参加其他 GitHub Skills 课程](https://github.com/skills)。
+* [阅读 GitHub 入门文档](https://docs.github.com/get-started)。
+* 想找开源项目参与？来看看 [GitHub Explore](https://github.com/explore)。

@@ -4,32 +4,33 @@
   Define terms and link to docs.github.com.
 -->
 
-## Step 2: Fix the test
+## Step 2: 修复测试问题
 
-_Great job adding the templated workflow! :tada:_
+_做得好！你已经成功添加了模板工作流! :tada:*_
 
-Adding that file to this branch is enough for GitHub Actions to begin running CI on your repository.
+把这个文件添加到分支中后，GitHub Actions 就会自动在你的仓库上运行持续集成（CI）流程。
 
-When a GitHub Actions workflow is running, you should see some checks in progress, like the screenshot below.
+当 GitHub Actions 开始执行工作流时，你会在拉取请求的合并区域看到类似下图的检查进度：
 
 <img alt="checks in progress in a merge box" src=https://user-images.githubusercontent.com/16547949/66080348-ecc5f580-e533-11e9-909e-c213b08790eb.png width=400 />
 
-You can follow along as GitHub Actions runs your job by going to the **Actions** tab or by clicking "Details" in the merge box below.
+你可以通过进入 **Actions** 标签页，或者点击合并区域中的 **Details（详细信息）**，来查看 GitHub Actions 的执行情况。
 
-When the tests finish, you'll see a red X :x: or a green check mark :heavy_check_mark: in the merge box. At that point, you can access the logs for the build job and its associated steps.
+测试完成后，你会看到一个红色叉号 :x:（代表失败）或 :heavy_check_mark:（代表通过）。这时，你可以打开构建日志，查看每个步骤的执行结果。
 
-_By looking at the logs, can you identify which tests failed?_ To find it, go to one of the failed builds and scroll through the log. Look for a section that lists all the unit tests. We're looking for the name of the test with an "x".
+*能从日志中看出是哪个测试没通过吗？*
+进入一个失败的构建，向下滚动日志，找到列出所有单元测试的部分。带有 “x” 的那一项就是出错的测试。
 
 <img alt="screenshot of a sample build log with the names of the tests blurred out" src=https://user-images.githubusercontent.com/16547949/65922013-e740a200-e3b1-11e9-8151-faf52c30201e.png width=400 />
 
-If the checks don't appear or if the checks are stuck in progress, there's a few things you can do to try and trigger them:
+如果没有出现检查结果，或者检查卡在“运行中”状态，可以尝试以下方法让它重新触发：
 
-- Refresh the page, it's possible the workflow ran and the page just hasn't been updated with that change.
-- Try making a commit on this branch. Our workflow is triggered with a `push` event, and committing to this branch will result in a new `push`.
-- Edit the workflow file on GitHub and ensure there are no red lines indicating a syntax problem.
+* 刷新页面，有时工作流已运行完，但页面尚未更新。
+* 在当前分支上再提交一次，因为工作流是通过 `push` 事件触发的。
+* 打开 GitHub 上的工作流文件，确认没有红色波浪线提示语法错误。
 
-### :keyboard: Activity: Fix the test
+### :keyboard: 实操环节：修复测试问题
 
-1. Update the contents in the `ci` branch to get the test to pass. You need to look at the logs to see what caused the test to fail.
-1. **Commit changes**.
-1. Wait about 20 seconds and then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/actions) will automatically update to the next step.
+1. 修改 `ci` 分支中的内容，为了让测试能够通过。你需要查看日志来找出失败的原因。
+2. **提交更改（Commit changes）**。
+3. 等待大约 20 秒，然后刷新此页面（当前教程页面）。[GitHub Actions](https://docs.github.com/actions) 会自动检测并跳转到下一步。
